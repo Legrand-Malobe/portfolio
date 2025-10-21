@@ -5,6 +5,10 @@
   margin: auto;
   text-align: center;
   @include mixin.center;
+  font-family: 'Cormorant', serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-size: .9rem;
 }
 
 * {
@@ -18,6 +22,7 @@ section {
   background-position: center;
   background-repeat: none;
   background-size: cover;
+  overflow-x: hidden;
 
   .container {
     max-width: variable.$max-width;

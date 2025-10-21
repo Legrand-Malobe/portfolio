@@ -1,0 +1,118 @@
+@use '../../style/mixin.scss' as mixin;
+@use '../../style/variable.scss' as variable;
+
+.home-container {
+  display: flex;
+  min-height: 400px;
+
+  .home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 3rem;
+
+    .home-intro {
+      position: relative;
+      width: calc(50% - 1.5rem);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      animation: intro-animation 1.6s ease-in;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .name {
+          font-size: 4rem;
+          font-weight: 900;
+          opacity: .8;
+        }
+
+        .profession {
+          font-size: 2.8rem;
+          font-weight: 700;
+          background: linear-gradient(45deg, #aec6cf, #004c58);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .description {
+        text-align: justify;
+        font-size: 1.2rem;
+        opacity: .8;
+        line-height: 2.2rem;
+      }
+
+      .contact-button {
+        button {
+          background: linear-gradient(45deg, #aec6cf, #004c58);
+          transition: .3s ease-in;
+
+          &:hover {
+            border: none;
+            background: linear-gradient(45deg, #004c58, #aec6cf);
+            transform: scale(1.1);
+            transition: .3s ease-in;
+
+          }
+
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .home-img {
+      position: relative;
+      background-image: url('https://a.storyblok.com/f/191576/1176x882/f95162c213/profile_picture_hero_before.webp');
+      background-position: center;
+      background-repeat: none;
+      background-size: cover;
+      width: 45%;
+      aspect-ratio: 1;
+      animation: img-animation 1.6s ease-in;
+
+    }
+  }
+}
+
+@keyframes intro-animation {
+  0% {
+    left: -10rem;
+    opacity: 0;
+  }
+
+  50% {
+    left: -10rem;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes img-animation {
+  0% {
+    right: -10rem;
+    opacity: 0;
+  }
+
+  50% {
+    right: -10rem;
+    opacity: 0;
+  }
+
+  100% {
+    right: 0rem;
+    opacity: 1;
+  }
+}

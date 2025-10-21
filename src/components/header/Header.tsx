@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import type { NavItemsType } from '../../types/sectionTypes';
 import './Header.scss';
 import { useState } from 'react';
@@ -11,8 +10,6 @@ const navItems: NavItemsType[] = [
 ]
 export default function Header() {
   const [activeLink, setActiveLink] = useState<string>(navItems[0].label)
-
-  console.log(activeLink);
 
   const handleNavigation = (item: NavItemsType) => {
     setActiveLink(item.label);
