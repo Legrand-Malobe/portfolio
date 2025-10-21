@@ -1,0 +1,67 @@
+@use '../../style/variable.scss' as variable;
+@use '../../style/mixin.scss' as mixin;
+
+header {
+  display: flex;
+  position: fixed;
+  top: 1rem;
+  animation: header-animation .8s ease-in;
+
+  .header-container {
+    @include mixin.center;
+    justify-content: flex-end;
+    height: variable.$header-height;
+    padding: 0 3rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.129);
+
+    nav {
+      display: flex;
+
+      ul {
+        display: flex;
+        padding: 0;
+        gap: 2rem;
+
+        .nav-item {
+          color: #CCC;
+          opacity: .6;
+          font-weight: 400;
+          font-size: .8rem;
+        }
+
+        li {
+          display: flex;
+          list-style-type: none;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          cursor: pointer;
+          text-transform: capitalize;
+          transition: .3s ease-in;
+
+          &.active {
+            color: variable.$primary-color;
+            font-weight: 600;
+            transform: scale(1.1);
+            transition: .3s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes header-animation {
+  0% {
+    top: -4rem;
+    opacity: .4;
+  }
+
+  100% {
+    top: 1rem;
+    opacity: 1;
+  }
+}

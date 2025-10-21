@@ -1,0 +1,27 @@
+@use './style/variable.scss' as variable;
+@use './style/mixin.scss' as mixin;
+
+#root {
+  margin: auto;
+  text-align: center;
+  @include mixin.center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/images/background.jpg');
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+
+  .container {
+    max-width: variable.$max-width;
+    margin: auto;
+    @include mixin.center;
+  }
+}
