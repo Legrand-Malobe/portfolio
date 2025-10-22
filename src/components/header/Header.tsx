@@ -1,19 +1,15 @@
 import type { NavItemsType } from '../../types/sectionTypes';
 import './Header.scss';
-import { useState } from 'react';
 
-const navItems: NavItemsType[] = [
-  { id: 0, link: '#about', label: 'about' },
-  { id: 1, link: '#works', label: 'works' },
-  { id: 2, link: '#skills', label: 'skills' },
-  { id: 3, link: '#contact', label: 'contact' },
-]
-export default function Header() {
-  const [activeLink, setActiveLink] = useState<string>(navItems[0].label)
+export default function Header({ activeLink, setActiveLink, navItems }: {
+  activeLink: string, setActiveLink: (data: string) => void, navItems: NavItemsType[]
+}) {
 
   const handleNavigation = (item: NavItemsType) => {
     setActiveLink(item.label);
+    document.getElementById(item.label)?.scrollIntoView({ behavior: 'smooth' })
   }
+
   return (
     <header>
       <div className="header-container">
@@ -23,7 +19,7 @@ export default function Header() {
               <div
                 className='nav-item'
                 key={index}
-                onClick={() => handleNavigation(item)}
+                onClick={() => handleNavigation(item,)}
               >
                 <li className={item.link == "#" + activeLink ? "active" : ""}>{item.label}</li>
               </div>))}

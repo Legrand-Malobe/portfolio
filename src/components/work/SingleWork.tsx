@@ -3,7 +3,7 @@ import type { RecentWorkType } from "../../types/sectionTypes";
 import { useRef, useState, useEffect } from "react";
 import { triggerAnimation } from "../../utils/triggerAnimation";
 
-export default function SingleWork({ work, index }: { work: RecentWorkType, index: number }) {
+export default function SingleWork({ work }: { work: RecentWorkType }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -24,7 +24,7 @@ export default function SingleWork({ work, index }: { work: RecentWorkType, inde
   }, []);
 
   return (
-    <div key={index} className={`work-content ${isVisible ? 'slide-in' : 'hidden'} ${work.isReversed && 'reversed'}`} ref={containerRef}>
+    <div className={`work-content ${isVisible ? 'slide-in' : 'hidden'} ${work.isReversed && 'reversed'}`} ref={containerRef}>
       <div className="project-details">
         <div className="details-header">
           <div className="label">

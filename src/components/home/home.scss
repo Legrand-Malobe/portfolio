@@ -4,6 +4,7 @@
 .home-container {
   display: flex;
   min-height: 400px;
+  padding-top: calc(variable.$header-height + 2rem);
 
   .home-content {
     display: flex;

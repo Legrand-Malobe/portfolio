@@ -2,7 +2,7 @@ import './home.scss';
 
 export default function Home() {
   return (
-    <section className="home-container">
+    <section className="home-container" id='home'>
       <div className="home-content">
         <div className="home-intro">
           <div className="title">

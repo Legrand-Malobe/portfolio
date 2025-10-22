@@ -4,6 +4,7 @@
 .work-container {
   @include mixin.center;
   flex-direction: column;
+  padding-top: calc(variable.$header-height + 2rem);
 
   .work-title {
     @include mixin.sectionTitle;
