@@ -1,5 +1,37 @@
+@use './variable.scss' as variable;
+
 @mixin center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin textGradientBackground {
+  background: linear-gradient(45deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin sectionTitle {
+  @include textGradientBackground;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+@mixin button {
+  background: linear-gradient(45deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
+  transition: .3s ease-in;
+
+  &:hover {
+    border: none;
+    box-shadow: 0px -1px 100px 4px rgba(0, 148, 170, 0.75);
+    transform: scale(1.1);
+    transition: .3s ease-in;
+  }
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
 }

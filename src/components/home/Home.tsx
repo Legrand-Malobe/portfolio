@@ -2,7 +2,7 @@ import './home.scss';
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <section className="home-container">
       <div className="home-content">
         <div className="home-intro">
           <div className="title">
@@ -27,6 +27,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div >
+    </section >
   )
 }

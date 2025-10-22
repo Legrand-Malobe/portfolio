@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-section {
+.main-container {
   width: 100vw;
   height: 100vh;
   background-image: url('./assets/images/background.jpg');
@@ -24,7 +24,7 @@ section {
   background-size: cover;
   overflow-x: hidden;
 
-  .container {
+  .main-content {
     max-width: variable.$max-width;
     margin: auto;
     @include mixin.center;

@@ -5,8 +5,8 @@ import LandingPage from './views/landingpage/LandingPage'
 function App() {
 
   return (
-    <section>
-      <div className="container">
+    <section className='main-container'>
+      <div className="main-content">
         <Routes>
           <Route path='/' element={<LandingPage />} />
         </Routes>

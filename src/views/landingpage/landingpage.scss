@@ -1,6 +1,6 @@
 @use '../../style/variable.scss' as variable;
 
-.main {
+.landingpage-content {
   position: relative;
   top: calc(variable.$header-height + 1rem);
   width: 100%;
@@ -8,5 +8,5 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
 }
