@@ -25,7 +25,8 @@ function App() {
         console.log('pageOffset', pageYOffset);
         console.log('sectionTop', sectionTop);
         console.log('item', item.label);
-        if (pageYOffset >= sectionTop - 188) {
+
+        if (pageYOffset >= sectionTop - (item.id == 3 ? 500 : 188)) {
           setActiveLink(item.label)
         }
       }

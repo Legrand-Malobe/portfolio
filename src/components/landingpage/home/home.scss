@@ -64,6 +64,7 @@
   &.hidden .home-content .home-intro,
   &.hidden .home-content .home-img {
     opacity: 0;
+    animation: fade-out .8s ease-in;
   }
 
   &.slide-in .home-content {
@@ -110,5 +111,14 @@
   100% {
     right: 0rem;
     opacity: 1;
+  }
+}
+
+@keyframes fade-out{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }

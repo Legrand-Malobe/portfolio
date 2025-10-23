@@ -53,7 +53,7 @@
     }
 
     &.hidden .skill-wrapper {
-      opacity: 0;
+      animation: fade-out .1s ease-in;
     }
 
     &.slide-in .skill-wrapper {
