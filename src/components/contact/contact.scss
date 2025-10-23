@@ -4,8 +4,47 @@
 .contact-container {
   @include mixin.center;
   flex-direction: column;
+  gap: 4rem;
 
   .contact-title {
     @include mixin.sectionTitle;
+  }
+
+  .contact-content {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      align-items: center;
+      gap: 1rem;
+
+      .contact-icon {
+        height: 35px;
+        aspect-ratio: 1;
+        @include mixin.center;
+        border-radius: 6px;
+        background: #FFF;
+        background: linear-gradient(45deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
+
+        img {
+          height: 30px;
+        }
+      }
+
+      .contact-label{
+        opacity: .8;
+        font-size: 1.2rem;
+
+        a span{
+          color: #FFF;
+        }
+      }
+    }
+
   }
 }
