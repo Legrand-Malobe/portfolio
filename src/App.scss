@@ -5,11 +5,11 @@
   margin: auto;
   text-align: center;
   @include mixin.center;
-  // font-family: 'Cormorant', serif;
   font-family: "Fira Code", monospace;
   font-style: normal;
   font-optical-sizing: auto;
   font-size: .8rem;
+  font-weight: 300;
 }
 
 * {

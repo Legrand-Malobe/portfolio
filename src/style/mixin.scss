@@ -16,7 +16,6 @@
 @mixin sectionTitle {
   @include textGradientBackground;
   font-size: 38px;
-  font-weight: 800;
 }
 
 @mixin button {

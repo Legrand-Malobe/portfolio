@@ -5,6 +5,7 @@
   @include mixin.center;
   flex-direction: column;
   padding-top: calc(variable.$header-height + 2rem);
+  margin-bottom: 6rem;
 
   .work-title {
     @include mixin.sectionTitle;
@@ -33,14 +34,13 @@
 
         .label {
           color: variable.$primary-color;
-          font-size: 1.2rem;
+          font-size: 1rem;
           font-weight: 500;
         }
 
         .title {
-          font-size: 2.5rem;
+          font-size: 38px;
           opacity: .8;
-          font-weight: 800;
           line-height: 2rem;
         }
       }
@@ -97,7 +97,7 @@
 
     &.slide-in .project-img .img-content {
       opacity: 1;
-      animation: img-animation 1.6s ease-in;
+      animation: img-animation .8s ease-in;
     }
 
     &.reversed {
@@ -136,7 +136,7 @@
 
       &.slide-in .project-img .img-content {
         opacity: 1;
-        animation: intro-animation 1s ease-in;
+        animation: intro-animation .8s ease-in;
       }
     }
   }

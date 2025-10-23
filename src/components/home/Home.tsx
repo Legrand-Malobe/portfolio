@@ -20,7 +20,9 @@ export default function Home({ setActiveLink }: { setActiveLink: (label: string)
             </p>
           </div>
           <div className="contact-button">
-            <button onClick={() => handleNavigation('contact', setActiveLink)}>Contact</button>
+            <button onClick={() => handleNavigation('contact', setActiveLink)}>
+              Contact me !
+            </button>
           </div>
         </div>
         <div className="home-img">

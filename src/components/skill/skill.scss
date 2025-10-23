@@ -27,9 +27,10 @@
       background: rgba(255, 255, 255, 0.129);
       transition: .3s ease-in;
       cursor: pointer;
+      min-width: 80px;
 
       img {
-        width: 25px;
+        width: 40px;
         position: absolute;
         z-index: 2;
       }

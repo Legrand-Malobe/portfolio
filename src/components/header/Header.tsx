@@ -9,6 +9,9 @@ export default function Header({ activeLink, setActiveLink, navItems }: {
   return (
     <header>
       <div className="header-container">
+        <div className="title">
+          {`<legrand_malobe/>`}
+        </div>
         <nav>
           <ul>
             {navItems.map((item, index) => (

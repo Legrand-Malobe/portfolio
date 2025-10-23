@@ -5,18 +5,31 @@ header {
   display: flex;
   position: fixed;
   top: 1rem;
-  animation: header-animation .8s ease-in;
+  animation: header-animation .4s ease-in;
   z-index: 2;
+  width: 50%;
 
   .header-container {
-    @include mixin.center;
-    justify-content: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: variable.$header-height;
-    padding: 0 3rem;
+    padding: 0 2rem;
     border-radius: 12px;
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.129);
+    width: 100%;
+
+    .title {
+      @include mixin.textGradientBackground;
+      display: inline-block; // Nécessaire pour l'effet de frappe
+      overflow: hidden; // Cache le texte qui dépasse
+      white-space: nowrap; // Empêche le texte de passer à la ligne
+      border-right: 2px solid variable.$primary-color; // Curseur de frappe
+      animation: typing 8s steps(40, end) .2s, blink-caret 0.75s step-end infinite;
+      max-width: 18ch
+    }
 
     nav {
       display: flex;
@@ -42,6 +55,7 @@ header {
           cursor: pointer;
           text-transform: capitalize;
           transition: .3s ease-in;
+          font-size: .8rem;
 
           &.active {
             color: variable.$primary-color;
@@ -64,6 +78,39 @@ header {
 
   100% {
     top: 1rem;
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0; // Commence avec une largeur de 0
+  }
+
+  to {
+    width: 100%; // Termine avec la largeur complète du texte
+  }
+}
+
+// Animation pour le clignotement du curseur
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: variable.$primary-color;
+  }
+}
+
+@keyframes delayTitle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
     opacity: 1;
   }
 }

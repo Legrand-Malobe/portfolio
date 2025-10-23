@@ -65,7 +65,13 @@ export default function Skill() {
       </div>
       <div className={`skill-content ${isVisible ? 'slide-in' : 'hidden'}`} ref={containerRef}>
         {skillsList.map((skill, index) => (
-          <div key={index} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div key={index}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column',
+              gap: '1rem'
+            }}>
             <div className="skill-wrapper"
               key={index}
               style={{ animationDuration: `${index + .5}s` }}

@@ -18,7 +18,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
-      animation: intro-animation 1.6s ease-in;
+      animation: intro-animation .8s ease-in;
 
       .title {
         display: flex;
@@ -27,14 +27,12 @@
 
         .name {
           font-size: 50px;
-          font-weight: 800;
           opacity: .8;
           text-align: left;
         }
 
         .profession {
           font-size: 38px;
-          font-weight: 600;
           @include mixin.textGradientBackground;
         }
       }
@@ -61,7 +59,7 @@
       background-size: cover;
       width: 45%;
       aspect-ratio: 1;
-      animation: img-animation 1.6s ease-in;
+      animation: img-animation .8s ease-in;
     }
   }
 }
