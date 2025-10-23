@@ -1,5 +1,5 @@
-@use '../../style/mixin.scss' as mixin;
-@use '../../style/variable.scss' as variable;
+@use '../../../style/mixin.scss' as mixin;
+@use '../../../style/variable.scss' as variable;
 
 .work-container {
   @include mixin.center;

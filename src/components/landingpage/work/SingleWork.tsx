@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import type { RecentWorkType } from "../../types/sectionTypes";
+import type { RecentWorkType } from "../../../types/sectionTypes";
 import { useRef, useState, useEffect } from "react";
-import { triggerAnimation } from "../../utils/triggerAnimation";
+import { triggerAnimation } from "../../../utils/triggerAnimation";
 
 export default function SingleWork({ work }: { work: RecentWorkType }) {
   const containerRef = useRef<HTMLDivElement | null>(null);

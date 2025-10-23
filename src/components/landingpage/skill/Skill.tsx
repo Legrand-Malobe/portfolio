@@ -1,16 +1,16 @@
 import './skill.scss';
-import reactIcon from '../../assets/svg/stack/react.svg';
-import typescriptIcon from '.././../assets/svg/stack/typescript.svg';
-import nodejsIcon from '.././../assets/svg/stack/nodejs.svg';
-import nestjsIcon from '.././../assets/svg/stack/nestjs.svg';
-import postgresqlIcon from '.././../assets/svg/stack/postgresql.svg';
-import sassIcon from '.././../assets/svg/stack/sass.svg';
-import javascriptIcon from '.././../assets/svg/stack/javascript.svg';
-import htmlIcon from '.././../assets/svg/stack/html.svg';
-import mysqlIcon from '.././../assets/svg/stack/mysql.svg';
+import reactIcon from '../../../assets/svg/stack/react.svg';
+import typescriptIcon from '../../../assets/svg/stack/typescript.svg';
+import nodejsIcon from '../../../assets/svg/stack/nodejs.svg';
+import nestjsIcon from '../../../assets/svg/stack/nestjs.svg';
+import postgresqlIcon from '../../../assets/svg/stack/postgresql.svg';
+import sassIcon from '../../../assets/svg/stack/sass.svg';
+import javascriptIcon from '../../../assets/svg/stack/javascript.svg';
+import htmlIcon from '../../../assets/svg/stack/html.svg';
+import mysqlIcon from '../../../assets/svg/stack/mysql.svg';
 import { useRef, useState, useEffect, type CSSProperties } from 'react';
-import { triggerAnimation } from '../../utils/triggerAnimation';
-import type { SkillType } from '../../types/sectionTypes';
+import { triggerAnimation } from '../../../utils/triggerAnimation';
+import type { SkillType } from '../../../types/sectionTypes';
 
 export default function Skill() {
 

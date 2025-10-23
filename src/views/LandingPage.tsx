@@ -1,12 +1,12 @@
 import './landingpage.scss';
-import Header from "../../components/header/Header";
-import Home from '../../components/home/Home';
-import Work from '../../components/work/Work';
+import Header from "../components/header/Header";
+import Home from '../components/landingpage/home/Home';
+import Work from '../components/landingpage/work/Work';
 import { useEffect, useState } from 'react';
-import type { NavItemsType } from '../../types/sectionTypes';
-import Skill from '../../components/skill/Skill';
-import Contact from '../../components/contact/Contact';
-import Footer from '../../components/footer/Footer';
+import type { NavItemsType } from '../types/sectionTypes';
+import Skill from '../components/landingpage/skill/Skill';
+import Contact from '../components/landingpage/contact/Contact';
+import Footer from '../components/landingpage/footer/Footer';
 
 export default function LandingPage() {
   const navItems: NavItemsType[] = [

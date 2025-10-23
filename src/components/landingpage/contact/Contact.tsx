@@ -1,9 +1,9 @@
 import './contact.scss';
-import mailIcon from '../../assets/svg/contact/mail.svg';
-import linkedInIcon from '../../assets/svg/contact/linkedIn.svg';
-import githubIcon from '../../assets/svg/contact/github.svg';
+import mailIcon from '../../../assets/svg/contact/mail.svg';
+import linkedInIcon from '../../../assets/svg/contact/linkedIn.svg';
+import githubIcon from '../../../assets/svg/contact/github.svg';
 import { Link } from 'react-router-dom';
-import type { ContactType } from '../../types/sectionTypes';
+import type { ContactType } from '../../../types/sectionTypes';
 
 export default function Contact() {
   const contactList: ContactType[] = [

@@ -1,7 +1,7 @@
 import './work.scss';
-import cayvayImage from '../../assets/images/cayvay.png';
-import baImage from '../../assets/images/bridgeafrica.png';
-import type { RecentWorkType } from '../../types/sectionTypes';
+import cayvayImage from '../../../assets/images/cayvay.png';
+import baImage from '../../../assets/images/bridgeafrica.png';
+import type { RecentWorkType } from '../../../types/sectionTypes';
 import SingleWork from './SingleWork';
 import React from 'react';
 

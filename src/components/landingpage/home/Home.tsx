@@ -1,4 +1,4 @@
-import { handleNavigation } from '../../utils/handleNavigation';
+import { handleNavigation } from '../../../utils/handleNavigation';
 import './home.scss';
 
 export default function Home({ setActiveLink }: { setActiveLink: (label: string) => void }) {
