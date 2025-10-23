@@ -1,6 +1,7 @@
+import { handleNavigation } from '../../utils/handleNavigation';
 import './home.scss';
 
-export default function Home() {
+export default function Home({ setActiveLink }: { setActiveLink: (label: string) => void }) {
   return (
     <section className="home-container" id='home'>
       <div className="home-content">
@@ -19,7 +20,7 @@ export default function Home() {
             </p>
           </div>
           <div className="contact-button">
-            <button>Contact</button>
+            <button onClick={() => handleNavigation('contact', setActiveLink)}>Contact</button>
           </div>
         </div>
         <div className="home-img">

@@ -12,3 +12,10 @@ export interface RecentWorkType {
   website: string,
   isReversed: boolean
 }
+
+export interface SkillType {
+  id: number,
+  icon: string,
+  name: string,
+  color: string
+}

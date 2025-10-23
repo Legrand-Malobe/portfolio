@@ -7,7 +7,7 @@
 }
 
 @mixin textGradientBackground {
-  background: linear-gradient(45deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
+  background: linear-gradient(90deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

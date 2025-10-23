@@ -1,0 +1,87 @@
+@use '../../style/mixin.scss' as mixin;
+@use '../../style/variable.scss' as variable;
+
+
+.skill-container {
+  @include mixin.center;
+  flex-direction: column;
+  position: relative;
+  padding-top: calc(variable.$header-height + 2rem);
+  gap: 5rem;
+
+  .title {
+    @include mixin.sectionTitle
+  }
+
+  .skill-content {
+    @include mixin.center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .skill-wrapper {
+      width: 50px;
+      aspect-ratio: 1;
+      border: 1px solid rgba(255, 255, 255, 0.129);
+      border-radius: 50%;
+      @include mixin.center;
+      background: rgba(255, 255, 255, 0.129);
+      transition: .3s ease-in;
+      cursor: pointer;
+
+      img {
+        width: 25px;
+        position: absolute;
+        z-index: 2;
+      }
+
+      &:hover {
+        box-shadow: 0px -1px 100px 4px rgba(255, 255, 255, 0.129);
+        transform: scale(1.2) translateY(-10px);
+        transition: .3s ease-in;
+      }
+
+      &:hover~.label {
+        opacity: .8;
+        transition: .3s ease-in;
+      }
+    }
+
+    .label {
+      opacity: 0;
+      transition: .3s ease-in;
+    }
+
+    &.hidden .skill-wrapper {
+      opacity: 0;
+    }
+
+    &.slide-in .skill-wrapper {
+      opacity: 1;
+      animation: scaleImg;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleImg {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
