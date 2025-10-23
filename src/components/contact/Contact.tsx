@@ -2,10 +2,11 @@ import './contact.scss';
 import mailIcon from '../../assets/svg/contact/mail.svg';
 import linkedInIcon from '../../assets/svg/contact/linkedIn.svg';
 import githubIcon from '../../assets/svg/contact/github.svg';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import type { ContactType } from '../../types/sectionTypes';
 
 export default function Contact() {
-  const contactList = [
+  const contactList: ContactType[] = [
     { id: 0, icon: mailIcon, value: 'legrand.malobe@outlook.fr' },
     { id: 1, icon: linkedInIcon, value: 'Legrand Malobe', link: 'https://www.linkedin.com/in/legrand-malobe-3a0937244/' },
     { id: 2, icon: githubIcon, value: 'Legrand-Malobe', link: 'https://github.com/Legrand-Malobe' },

@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import type { NavItemsType } from '../../types/sectionTypes';
 import Skill from '../../components/skill/Skill';
 import Contact from '../../components/contact/Contact';
+import Footer from '../../components/footer/Footer';
 
 export default function LandingPage() {
   const navItems: NavItemsType[] = [
@@ -42,9 +43,10 @@ export default function LandingPage() {
       <Header activeLink={activeLink} setActiveLink={setActiveLink} navItems={navItems} />
       <div className="landingpage-content">
         <Home setActiveLink={setActiveLink}/>
-        <Work />
         <Skill />
+        <Work />
         <Contact />
+        <Footer />
       </div>
     </>
   )

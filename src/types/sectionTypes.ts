@@ -19,3 +19,10 @@ export interface SkillType {
   name: string,
   color: string
 }
+
+export interface ContactType {
+  id: number,
+  icon: string,
+  value: string,
+  link?: string
+}
