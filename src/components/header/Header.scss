@@ -23,10 +23,10 @@ header {
 
     .title {
       @include mixin.textGradientBackground;
-      display: inline-block; // Nécessaire pour l'effet de frappe
-      overflow: hidden; // Cache le texte qui dépasse
-      white-space: nowrap; // Empêche le texte de passer à la ligne
-      border-right: 2px solid variable.$primary-color; // Curseur de frappe
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid variable.$primary-color;
       animation: typing 8s steps(40, end) .2s, blink-caret 0.75s step-end infinite;
       max-width: 18ch
     }

@@ -10,7 +10,7 @@ export default function Header({ activeLink, setActiveLink, navItems }: {
     <header>
       <div className="header-container">
         <div className="title">
-          {`<legrand_malobe/>`}
+          {`<legrand_malobe/> `}
         </div>
         <nav>
           <ul>

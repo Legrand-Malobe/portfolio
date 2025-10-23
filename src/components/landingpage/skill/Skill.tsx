@@ -31,17 +31,7 @@ export default function Skill() {
   ]
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-
-    windowWidth > 850 && triggerAnimation(containerRef, setIsVisible);
-    // windowWidth <= 850 && triggerAnimation(mobileContainerRef, setIsVisible);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    triggerAnimation(containerRef, setIsVisible, windowWidth, setWindowWidth);
   }, []);
 
   const skillStyle = (color?: string) => {
