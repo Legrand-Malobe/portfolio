@@ -26,6 +26,7 @@ header {
       display: inline-block;
       overflow: hidden;
       white-space: nowrap;
+      padding-right: 5px;
       border-right: 2px solid variable.$primary-color;
       animation: typing 8s steps(40, end) .2s, blink-caret 0.75s step-end infinite;
       max-width: 18ch

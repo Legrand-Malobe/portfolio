@@ -24,6 +24,7 @@
   background-repeat: none;
   background-size: cover;
   overflow-x: hidden;
+  overflow-y: auto;
 
   .main-content {
     max-width: variable.$max-width;

@@ -1,18 +1,21 @@
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { handleNavigation } from '../../../utils/handleNavigation';
 import './home.scss';
 import { triggerAnimation } from '../../../utils/triggerAnimation';
+import { ActiveLinkContext } from '../../../context/ActiveLinkContext';
 
-export default function Home({ setActiveLink }: { setActiveLink: (label: string) => void }) {
+export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const { setActiveLink } = useContext(ActiveLinkContext);
+
 
   useEffect(() => {
     triggerAnimation(containerRef, setIsVisible, windowWidth, setWindowWidth)
   }, [isVisible]);
 
-  
+
   return (
     <section className={`home-container ${isVisible ? 'slide-in' : 'hidden'}`} id='home' ref={containerRef}>
       <div className="home-content">
