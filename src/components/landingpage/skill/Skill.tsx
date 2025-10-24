@@ -49,7 +49,7 @@ export default function Skill() {
 
 
   return (
-    <div className="skill-container" id="skill">
+    <div className="skill-container" id="skills">
       <div className="title">
         Skills
       </div>
@@ -64,7 +64,7 @@ export default function Skill() {
             }}>
             <div className="skill-wrapper"
               key={index}
-              style={{ animationDuration: `${index + .5}s` }}
+              style={{ animationDuration: `${index * 1}s` }}
             >
               <img src={skill.icon} alt="" />
               <div style={skillStyle(skill?.color)}></div>

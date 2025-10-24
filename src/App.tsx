@@ -9,7 +9,7 @@ function App() {
 
   const navItems: NavItemsType[] = [
     { id: 0, link: '#home', label: 'home' },
-    { id: 1, link: '#skill', label: 'skill' },
+    { id: 1, link: '#skills', label: 'skills' },
     { id: 2, link: '#work', label: 'work' },
     { id: 3, link: '#contact', label: 'contact' },
   ]
@@ -22,11 +22,7 @@ function App() {
       const section = document.querySelector(item.link)! as HTMLElement;
       if (section) {
         const sectionTop = section?.getBoundingClientRect()?.y;
-        console.log('pageOffset', pageYOffset);
-        console.log('sectionTop', sectionTop);
-        console.log('item', item.label);
-
-        if (pageYOffset >= sectionTop - (item.id == 3 ? 500 : 188)) {
+        if (pageYOffset >= sectionTop - (item.id + 1 == navItems.length ? 500 : 188)) {
           setActiveLink(item.label)
         }
       }

@@ -85,15 +85,14 @@ header {
 
 @keyframes typing {
   from {
-    width: 0; // Commence avec une largeur de 0
+    width: 0;
   }
 
   to {
-    width: 100%; // Termine avec la largeur complète du texte
+    width: 100%; 
   }
 }
 
-// Animation pour le clignotement du curseur
 @keyframes blink-caret {
 
   from,

@@ -30,7 +30,7 @@ export default function Home() {
           </div>
           <div className="description">
             <p>
-              Passionate about web application design and development, I build responsive and user-friendly websites and applications. With expertise in both front-end and back-end development, I focus on clean code that ensures a seamless user experience while providing robust server-side functionality.
+              Passionate about web application design and development, i build responsive and user-friendly applications. With expertise in both front-end and back-end development, i focus on clean code that ensures a seamless user experience while providing robust server-side functionality.
             </p>
           </div>
           <div className="contact-button">
