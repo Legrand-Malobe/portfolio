@@ -7,12 +7,11 @@ import { ActiveLinkContext } from '../../../context/ActiveLinkContext';
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { setActiveLink } = useContext(ActiveLinkContext);
 
 
   useEffect(() => {
-    triggerAnimation(containerRef, setIsVisible, windowWidth, setWindowWidth)
+    triggerAnimation(containerRef, setIsVisible)
   }, [isVisible]);
 
 

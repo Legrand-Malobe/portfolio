@@ -70,6 +70,12 @@ header {
   }
 }
 
+@media screen and (max-width: variable.$tablet-breakpoint) {
+  header {
+    width: 80%;
+  }
+}
+
 
 @keyframes header-animation {
   0% {
@@ -89,7 +95,7 @@ header {
   }
 
   to {
-    width: 100%; 
+    width: 100%;
   }
 }
 

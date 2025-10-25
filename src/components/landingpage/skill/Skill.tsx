@@ -16,7 +16,6 @@ export default function Skill() {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const skillsList: SkillType[] = [
     { id: 0, icon: reactIcon, name: 'React', color: 'rgba(0, 216, 255, 0.75)' },
@@ -31,7 +30,7 @@ export default function Skill() {
   ]
 
   useEffect(() => {
-    triggerAnimation(containerRef, setIsVisible, windowWidth, setWindowWidth);
+    triggerAnimation(containerRef, setIsVisible);
   }, []);
 
   const skillStyle = (color?: string) => {

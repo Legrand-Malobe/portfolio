@@ -6,10 +6,9 @@ import { triggerAnimation } from "../../../utils/triggerAnimation";
 export default function SingleWork({ work }: { work: RecentWorkType }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    triggerAnimation(containerRef, setIsVisible, windowWidth, setWindowWidth);
+    triggerAnimation(containerRef, setIsVisible);
   }, [isVisible]);
 
   return (

@@ -80,6 +80,52 @@
   }
 }
 
+@media screen and (max-width:1100px) {
+  .home-container {
+
+    .home-content .home-intro {
+      .title {
+        .name {
+          font-size: 32px;
+        }
+
+        .profession {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:720px) {
+  .home-container {
+
+    .home-content {
+      flex-direction: column;
+
+      .home-intro {
+        width: 100%;
+        .title {
+          .name {
+            font-size: 24px;
+          }
+
+          .profession {
+            font-size: 18px;
+          }
+        }
+        .description{
+          font-size: 12px;
+          line-height: 24px;
+        }
+      }
+      .home-img{
+        display: none;
+      }
+    }
+  }
+}
+
 @keyframes intro-animation {
   0% {
     left: -10rem;
@@ -114,11 +160,12 @@
   }
 }
 
-@keyframes fade-out{
-  0%{
+@keyframes fade-out {
+  0% {
     opacity: 1;
   }
-  100%{
+
+  100% {
     opacity: 0;
   }
 }

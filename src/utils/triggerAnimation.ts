@@ -3,8 +3,6 @@ import type { RefObject } from "react";
 export const triggerAnimation = (
   containerRef: RefObject<HTMLDivElement | null>,
   setIsVisible: (isVisible: boolean) => void,
-  windowWidth: number,
-  setWindowWidth: (windowWidth: number) => void
 ) => {
 
   const handleAnimation = () => {
@@ -30,16 +28,5 @@ export const triggerAnimation = (
       }
     };
   }
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth)
-  };
-  window.addEventListener('resize', handleResize);
-
-  windowWidth > 850 && handleAnimation();
-  // windowWidth <= 850 && triggerAnimation(mobileContainerRef, setIsVisible);
-
-  return () => {
-    window.removeEventListener('resize', handleResize);
-  };
-
+  handleAnimation();
 }
