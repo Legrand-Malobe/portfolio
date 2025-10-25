@@ -1,4 +1,5 @@
 @use './variable.scss' as variable;
+@use './animation.scss';
 
 @mixin center {
   display: flex;
@@ -21,6 +22,8 @@
 @mixin button {
   background: linear-gradient(45deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
   transition: .3s ease-in;
+  color: #FFF;
+  animation: button-animation 1.5s ease-in infinite;
 
   &:hover {
     border: none;

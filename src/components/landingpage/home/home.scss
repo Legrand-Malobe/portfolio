@@ -1,5 +1,7 @@
 @use '../../../style/mixin.scss' as mixin;
 @use '../../../style/variable.scss' as variable;
+@use '../../../style/animation.scss';
+
 
 .home-container {
   display: flex;
@@ -26,7 +28,6 @@
 
         .name {
           font-size: 50px;
-          opacity: .8;
           text-align: left;
         }
 
@@ -39,8 +40,8 @@
       .description {
         text-align: justify;
         font-size: 16px;
-        opacity: .8;
         line-height: 2.2rem;
+        opacity: .6;
       }
 
       .contact-button {
@@ -61,11 +62,6 @@
     }
   }
 
-  &.hidden .home-content .home-intro,
-  &.hidden .home-content .home-img {
-    opacity: 0;
-    animation: fade-out .8s ease-in;
-  }
 
   &.slide-in .home-content {
     .home-intro {
@@ -78,9 +74,15 @@
       animation: img-animation .8s ease-in;
     }
   }
+
+  &.hidden .home-content .home-intro,
+  &.hidden .home-content .home-img {
+    opacity: 0;
+    animation: fade-out .8s ease-in;
+  }
 }
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width: variable.$tablet-breakpoint) {
   .home-container {
 
     .home-content .home-intro {
@@ -97,7 +99,7 @@
   }
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:variable.$mobile-breakpoint) {
   .home-container {
 
     .home-content {
@@ -105,67 +107,26 @@
 
       .home-intro {
         width: 100%;
+
         .title {
           .name {
-            font-size: 24px;
+            font-size: variable.$mobile-section-title-font-size;
           }
 
           .profession {
             font-size: 18px;
           }
         }
-        .description{
+
+        .description {
           font-size: 12px;
           line-height: 24px;
         }
       }
-      .home-img{
+
+      .home-img {
         display: none;
       }
     }
-  }
-}
-
-@keyframes intro-animation {
-  0% {
-    left: -10rem;
-    opacity: 0;
-  }
-
-  50% {
-    left: -10rem;
-    opacity: 0;
-  }
-
-  100% {
-    left: 0rem;
-    opacity: 1;
-  }
-}
-
-@keyframes img-animation {
-  0% {
-    right: -10rem;
-    opacity: 0;
-  }
-
-  50% {
-    right: -10rem;
-    opacity: 0;
-  }
-
-  100% {
-    right: 0rem;
-    opacity: 1;
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
   }
 }

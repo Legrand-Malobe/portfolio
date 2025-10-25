@@ -9,3 +9,9 @@
   flex-direction: column;
   gap: 5rem;
 }
+
+@media screen and (max-width:variable.$mobile-breakpoint) {
+  .landingpage-content{
+    gap: 0;
+  }
+}

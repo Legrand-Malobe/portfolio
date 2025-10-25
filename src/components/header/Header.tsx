@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import type { NavItemsType } from '../../types/sectionTypes';
 import { handleNavigation } from '../../utils/handleNavigation';
-import './Header.scss';
+import './header.scss';
 import { ActiveLinkContext } from '../../context/ActiveLinkContext';
 
 export default function Header({ navItems }: { navItems: NavItemsType[] }) {

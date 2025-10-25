@@ -1,3 +1,4 @@
+import './singlework.scss';
 import { NavLink } from "react-router-dom";
 import type { RecentWorkType } from "../../../types/sectionTypes";
 import { useRef, useState, useEffect } from "react";
@@ -5,7 +6,7 @@ import { triggerAnimation } from "../../../utils/triggerAnimation";
 
 export default function SingleWork({ work }: { work: RecentWorkType }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     triggerAnimation(containerRef, setIsVisible);
@@ -23,8 +24,13 @@ export default function SingleWork({ work }: { work: RecentWorkType }) {
           </div>
         </div>
         <div className="description">
+          <div className="project-img-mobile">
+            <div className="img-content-mobile" style={{ backgroundImage: `url(${work.image})` }}></div>
+          </div>
           <p>
-            {work.description}
+            <span>
+              {work.description}
+            </span>
           </p>
           <div className="project-button">
             <NavLink to={work.website} target='blank'>

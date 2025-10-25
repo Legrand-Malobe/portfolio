@@ -11,11 +11,11 @@
   }
 
   .contact-content {
-    display: flex;
     width: 80%;
-    align-items: center;
-    justify-content: center;
+    @include mixin.center;
     gap: 4rem;
+    flex-wrap: wrap;
+    row-gap: 2rem;
 
     .contact-item {
       display: flex;
@@ -36,16 +36,39 @@
         }
       }
 
-      .contact-label{
+      .contact-label {
         opacity: .8;
-        font-size: 1rem;
+        font-size: 16px;
 
-        a span{
+        a span {
           color: #FFF;
           font-weight: 300;
         }
       }
     }
 
+  }
+}
+
+@media screen and (max-width: variable.$tablet-breakpoint) {
+  .contact-container .contact-content {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width:variable.$mobile-breakpoint) {
+  .contact-container {
+
+    .contact-title {
+      font-size: variable.$mobile-section-title-font-size;
+    }
+
+    .contact-content {
+      justify-content: flex-start;
+
+      .contact-item .contact-label {
+        font-size: 12px;
+      }
+    }
   }
 }

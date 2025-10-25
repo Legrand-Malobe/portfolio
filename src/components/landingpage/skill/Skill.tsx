@@ -15,17 +15,17 @@ import type { SkillType } from '../../../types/sectionTypes';
 export default function Skill() {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const skillsList: SkillType[] = [
     { id: 0, icon: reactIcon, name: 'React', color: 'rgba(0, 216, 255, 0.75)' },
     { id: 1, icon: typescriptIcon, name: 'TypeScript', color: 'rgba(49, 120, 198, 0.75)' },
     { id: 2, icon: nodejsIcon, name: 'Node.js', color: 'rgba(140, 200, 75, 0.75)' },
     { id: 3, icon: nestjsIcon, name: 'NestJs', color: 'rgba(234, 40, 69, 0.75)' },
-    { id: 4, icon: postgresqlIcon, name: 'PostgreSql', color: 'rgba(51, 103, 145, 0.75)' },
-    { id: 5, icon: javascriptIcon, name: 'JavaScript', color: 'rgba(247, 223, 30, 0.75)' },
-    { id: 6, icon: mysqlIcon, name: 'MySql', color: 'rgba(93, 135, 161, 0.75)' },
-    { id: 7, icon: sassIcon, name: 'Sass', color: 'rgba(140, 200, 75, 0.75)' },
+    { id: 4, icon: javascriptIcon, name: 'JavaScript', color: 'rgba(247, 223, 30, 0.75)' },
+    { id: 5, icon: mysqlIcon, name: 'MySql', color: 'rgba(93, 135, 161, 0.75)' },
+    { id: 6, icon: sassIcon, name: 'Sass', color: 'rgba(140, 200, 75, 0.75)' },
+    { id: 7, icon: postgresqlIcon, name: 'PostgreSql', color: 'rgba(51, 103, 145, 0.75)' },
     { id: 8, icon: htmlIcon, name: 'HTML', color: 'rgba(241, 101, 41, 0.75)' },
   ]
 

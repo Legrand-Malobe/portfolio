@@ -6,7 +6,7 @@ import { ActiveLinkContext } from '../../../context/ActiveLinkContext';
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const { setActiveLink } = useContext(ActiveLinkContext);
 
 

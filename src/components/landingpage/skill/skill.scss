@@ -20,7 +20,6 @@
     width: 50%;
 
     .skill-wrapper {
-      width: 50px;
       aspect-ratio: 1;
       border: 1px solid rgba(255, 255, 255, 0.129);
       border-radius: 50%;
@@ -28,7 +27,7 @@
       background: rgba(255, 255, 255, 0.129);
       transition: .3s ease-in;
       cursor: pointer;
-      min-width: 70px;
+      width: 70px;
 
       img {
         width: 35px;
@@ -43,7 +42,7 @@
       }
 
       &:hover~.label {
-        opacity: .8;
+        opacity: 1;
         transition: .3s ease-in;
       }
     }
@@ -63,6 +62,33 @@
     }
   }
 }
+
+
+@media screen and (max-width: variable.$mobile-breakpoint) {
+  .skill-container {
+
+    .title {
+      font-size: variable.$mobile-section-title-font-size;
+    }
+
+    .skill-content {
+      width: 100%;
+
+      .skill-wrapper {
+        width: 50px;
+
+        img {
+          width: 30px;
+        }
+      }
+
+      .label {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 
 @keyframes fadeIn {
   0% {
