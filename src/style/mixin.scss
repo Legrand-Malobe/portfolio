@@ -1,6 +1,10 @@
 @use './variable.scss' as variable;
 @use './animation.scss';
 
+/*
+* Sass mixin
+*/
+
 @mixin center {
   display: flex;
   align-items: center;

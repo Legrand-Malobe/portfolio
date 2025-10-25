@@ -1,6 +1,9 @@
 @use '../../../style/mixin.scss' as mixin;
 @use '../../../style/variable.scss' as variable;
 
+/*
+* Desktop style
+*/
 .footer-container {
   @include mixin.center;
   border-top: 1px solid rgba(255, 255, 255, 0.129);

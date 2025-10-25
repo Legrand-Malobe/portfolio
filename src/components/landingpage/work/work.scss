@@ -1,6 +1,9 @@
 @use '../../../style/mixin.scss' as mixin;
 @use '../../../style/variable.scss' as variable;
 
+/*
+* Desktop style
+*/
 .work-container {
   @include mixin.center;
   flex-direction: column;
@@ -12,6 +15,9 @@
   }
 }
 
+/*
+* Mobile style
+*/
 @media screen and (max-width: 900px) {
   .work-container .work-title {
     font-size: variable.$mobile-section-title-font-size;

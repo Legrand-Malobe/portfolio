@@ -1,7 +1,9 @@
 @use '../../../style/mixin.scss' as mixin;
 @use '../../../style/variable.scss' as variable;
 
-
+/*
+* Desktop style
+*/
 .skill-container {
   @include mixin.center;
   flex-direction: column;
@@ -63,7 +65,9 @@
   }
 }
 
-
+/*
+* Mobile style
+*/
 @media screen and (max-width: variable.$mobile-breakpoint) {
   .skill-container {
 

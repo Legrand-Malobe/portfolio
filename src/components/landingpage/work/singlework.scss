@@ -2,6 +2,9 @@
 @use '../../../style/variable.scss' as variable;
 @use '../../../style/animation.scss';
 
+/*
+* Desktop style
+*/
 .work-content {
   display: flex;
   justify-content: center;
@@ -25,7 +28,7 @@
 
       .label {
         color: variable.$primary-color;
-        font-size: 12px;
+        font-size: variable.$font-size;
         font-weight: 500;
       }
 
@@ -143,7 +146,9 @@
   }
 }
 
-
+/*
+* Mobile style
+*/
 @media screen and (max-width: 900px) {
   .work-content {
     margin-top: 3rem;

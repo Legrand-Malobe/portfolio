@@ -2,6 +2,9 @@
 @use '../../style/mixin.scss' as mixin;
 @use '../../style/animation.scss';
 
+/*
+* Desktop style
+*/
 header {
   display: flex;
   justify-content: center;
@@ -57,7 +60,7 @@ header {
           cursor: pointer;
           text-transform: capitalize;
           transition: .3s ease-in;
-          font-size: 12rem;
+          font-size: variable.$font-size;
 
           &.active {
             color: variable.$primary-color;
@@ -71,12 +74,18 @@ header {
   }
 }
 
+/*
+* Tablet style
+*/
 @media screen and (max-width: variable.$tablet-breakpoint) {
   header {
     width: 80%;
   }
 }
 
+/*
+* Mobile style
+*/
 @media screen and (max-width: variable.$mobile-breakpoint) {
   header {
 

@@ -1,9 +1,16 @@
+/*
+* Sass variable
+*/
+
 $max-width: 1440px;
-$header-height: 60px;
-$primary-color: #0094AA;
-$font-size: 12px;
-$gradient-primary-color: #AEC6CF;
-$gradient-secondary-color: #004C58;
 $tablet-breakpoint: 1100px;
 $mobile-breakpoint: 650px;
-$mobile-section-title-font-size: 24px
+
+$header-height: 60px;
+$font-size: 12px;
+
+$mobile-section-title-font-size: 24px;
+
+$primary-color: #0094AA;
+$gradient-primary-color: #AEC6CF;
+$gradient-secondary-color: #004C58;

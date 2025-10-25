@@ -2,7 +2,9 @@
 @use '../../../style/variable.scss' as variable;
 @use '../../../style/animation.scss';
 
-
+/*
+* Desktop style
+*/
 .home-container {
   display: flex;
   min-height: 400px;
@@ -82,6 +84,9 @@
   }
 }
 
+/*
+* Tablet style
+*/
 @media screen and (max-width: variable.$tablet-breakpoint) {
   .home-container {
 
@@ -99,6 +104,9 @@
   }
 }
 
+/*
+* Mobile style
+*/
 @media screen and (max-width:variable.$mobile-breakpoint) {
   .home-container {
 
@@ -119,7 +127,7 @@
         }
 
         .description {
-          font-size: 12px;
+          font-size: variable.$font-size;
           line-height: 24px;
         }
       }
