@@ -3,6 +3,7 @@ import { handleNavigation } from '../../../utils/handleNavigation';
 import './home.scss';
 import { triggerAnimation } from '../../../utils/triggerAnimation';
 import { ActiveLinkContext } from '../../../context/ActiveLinkContext';
+import introImg from '../../../assets/images/background01.gif';
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -39,8 +40,8 @@ export default function Home() {
           </div>
         </div>
         <div className="home-img">
-          <div className="img-content">
-          </div>
+          <img className="img-content" src={introImg} alt='img-content' />
+          <div className="home-img-content"></div>
         </div>
       </div>
     </section >

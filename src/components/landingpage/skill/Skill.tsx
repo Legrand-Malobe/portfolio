@@ -15,7 +15,7 @@ import type { SkillType } from '../../../types/sectionTypes';
 export default function Skill() {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const skillsList: SkillType[] = [
     { id: 0, icon: reactIcon, name: 'React', color: 'rgba(0, 216, 255, 0.75)' },

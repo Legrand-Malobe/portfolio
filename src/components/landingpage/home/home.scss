@@ -55,12 +55,26 @@
 
     .home-img {
       position: relative;
-      background-image: url('https://a.storyblok.com/f/191576/1176x882/f95162c213/profile_picture_hero_before.webp');
-      background-position: center;
-      background-repeat: none;
-      background-size: cover;
       width: 45%;
       aspect-ratio: 1;
+      @include mixin.center;
+
+      .img-content {
+        background-image: url('../../../assets/images/background02.gif');
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        width: 90%;
+        z-index: 1;
+      }
+
+      .home-img-content {
+        position: absolute;
+        height: 8px;
+        aspect-ratio: 1;
+        z-index: 0;
+        box-shadow: 0px -20px 800px 130px variable.$primary-color;
+      }
     }
   }
 

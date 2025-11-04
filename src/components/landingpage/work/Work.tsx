@@ -11,7 +11,7 @@ export default function Work() {
     {
       id: 0,
       title: 'Cay-vay',
-      description: lorem,
+      description: 'Cay-Vay is a web application that helps you to create a resume in just few minutes that will open doors to employment. Simply choose the template that suits you, fill in your information, customize the chosen template, and finally download your resume in PDF format.',
       image: cayvayImage,
       website: 'https://cay-vay.com',
       isReversed: false

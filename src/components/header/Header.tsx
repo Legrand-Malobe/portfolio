@@ -16,13 +16,13 @@ export default function Header({ navItems }: { navItems: NavItemsType[] }) {
         <nav>
           <ul>
             {navItems.map((item, index) => (
-              <div
+              <menu
                 className='nav-item'
                 key={index}
                 onClick={() => handleNavigation(item.label, setActiveLink)}
               >
                 <li className={item.link == "#" + activeLink ? "active" : ""}>{item.label}</li>
-              </div>))}
+              </menu>))}
           </ul>
         </nav>
       </div>

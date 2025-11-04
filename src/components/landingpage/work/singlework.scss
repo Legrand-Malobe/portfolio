@@ -176,19 +176,24 @@
         }
 
         p {
-          transform: translateY(-2.5rem);
+          transform: translateY(-2rem);
           border: none;
           padding: 1rem;
+          width: 100%;
         }
 
         .project-button {
-          transform: translateY(-2.5rem);
+          transform: translateY(-2rem);
         }
       }
     }
 
     .project-img {
       display: none;
+    }
+
+    &.reversed .project-details .description p{
+      left: 0;
     }
   }
 }
