@@ -1,0 +1,94 @@
+@use './variable.scss' as variable;
+
+
+@keyframes intro-animation {
+  0% {
+    left: -10rem;
+    opacity: 0;
+  }
+
+  50% {
+    left: -10rem;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes img-animation {
+  0% {
+    right: -10rem;
+    opacity: 0;
+  }
+
+  50% {
+    right: -10rem;
+    opacity: 0;
+  }
+
+  100% {
+    right: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes header-animation {
+  0% {
+    top: -4rem;
+    opacity: .4;
+  }
+
+  100% {
+    top: 1rem;
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: variable.$primary-color;
+  }
+}
+
+@keyframes button-animation {
+  0% {
+    box-shadow: none;
+  }
+
+  50% {
+    box-shadow: 0px -1px 100px 4px rgba(0, 148, 170, 0.75);
+  }
+
+  100% {
+    box-shadow: none;
+  }
+}

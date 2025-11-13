@@ -1,0 +1,35 @@
+@use './style/variable.scss' as variable;
+@use './style/mixin.scss' as mixin;
+
+#root {
+  margin: auto;
+  text-align: center;
+  @include mixin.center;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-size: variable.$font-size;
+  font-weight: 300;
+  color: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/images/background.jpg');
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .main-content {
+    max-width: variable.$max-width;
+    margin: auto;
+    @include mixin.center;
+  }
+}

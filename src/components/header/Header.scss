@@ -1,0 +1,111 @@
+@use '../../style/variable.scss' as variable;
+@use '../../style/mixin.scss' as mixin;
+@use '../../style/animation.scss';
+
+/*
+* Desktop style
+*/
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 1rem;
+  animation: header-animation .4s ease-in;
+  z-index: 2;
+  width: 50%;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: variable.$header-height;
+    padding: 0 2rem;
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.129);
+    width: 100%;
+
+    .title {
+      @include mixin.textGradientBackground;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-right: 5px;
+      border-right: 2px solid variable.$primary-color;
+      animation: typing 8s steps(40, end) .2s, blink-caret 0.75s step-end infinite;
+      max-width: 18ch
+    }
+
+    nav {
+      display: flex;
+
+      ul {
+        display: flex;
+        padding: 0;
+        gap: 2rem;
+
+        .nav-item {
+          color: #CCC;
+          opacity: .6;
+          font-weight: 300;
+        }
+
+        li {
+          display: flex;
+          list-style-type: none;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          cursor: pointer;
+          text-transform: capitalize;
+          transition: .3s ease-in;
+          font-size: variable.$font-size;
+
+          &.active {
+            color: variable.$primary-color;
+            font-weight: 600;
+            transform: scale(1.1);
+            transition: .3s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+* Tablet style
+*/
+@media screen and (max-width: variable.$tablet-breakpoint) {
+  header {
+    width: 80%;
+  }
+}
+
+/*
+* Mobile style
+*/
+@media screen and (max-width: variable.$mobile-breakpoint) {
+  header {
+
+    .header-container {
+      width: auto;
+      padding: 0 1rem;
+
+      .title {
+        display: none;
+      }
+
+      nav ul {
+        gap: 0;
+
+        menu {
+          &:first-child {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

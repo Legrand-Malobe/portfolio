@@ -1,0 +1,84 @@
+@use '../../../style/mixin.scss' as mixin;
+@use '../../../style/variable.scss' as variable;
+
+/*
+* Desktop style
+*/
+.contact-container {
+  @include mixin.center;
+  flex-direction: column;
+  gap: 4rem;
+
+  .contact-title {
+    @include mixin.sectionTitle;
+  }
+
+  .contact-content {
+    width: 80%;
+    @include mixin.center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      align-items: center;
+      gap: 1rem;
+
+      .contact-icon {
+        height: 35px;
+        aspect-ratio: 1;
+        @include mixin.center;
+        border-radius: 6px;
+        background: #FFF;
+        background: linear-gradient(45deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
+
+        img {
+          height: 25px;
+        }
+      }
+
+      .contact-label {
+        opacity: .8;
+        font-size: 16px;
+
+        a span {
+          color: #FFF;
+          font-weight: 300;
+        }
+      }
+    }
+
+  }
+}
+
+/*
+* Tablet style
+*/
+
+@media screen and (max-width: variable.$tablet-breakpoint) {
+  .contact-container .contact-content {
+    justify-content: space-between;
+  }
+}
+
+/*
+* Mobile style
+*/
+@media screen and (max-width:variable.$mobile-breakpoint) {
+  .contact-container {
+
+    .contact-title {
+      font-size: variable.$mobile-section-title-font-size;
+    }
+
+    .contact-content {
+      justify-content: flex-start;
+
+      .contact-item .contact-label {
+        font-size: variable.$font-size;
+      }
+    }
+  }
+}

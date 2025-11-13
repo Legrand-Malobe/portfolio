@@ -1,0 +1,17 @@
+@use '../style/variable.scss' as variable;
+
+.landingpage-content {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1rem;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+@media screen and (max-width:variable.$mobile-breakpoint) {
+  .landingpage-content{
+    gap: 0;
+  }
+}

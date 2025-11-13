@@ -1,0 +1,25 @@
+@use '../../../style/mixin.scss' as mixin;
+@use '../../../style/variable.scss' as variable;
+
+/*
+* Desktop style
+*/
+.work-container {
+  @include mixin.center;
+  flex-direction: column;
+  padding-top: calc(variable.$header-height + 2rem);
+  margin-bottom: 6rem;
+
+  .work-title {
+    @include mixin.sectionTitle;
+  }
+}
+
+/*
+* Mobile style
+*/
+@media screen and (max-width: 900px) {
+  .work-container .work-title {
+    font-size: variable.$mobile-section-title-font-size;
+  }
+}

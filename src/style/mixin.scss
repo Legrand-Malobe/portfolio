@@ -1,0 +1,45 @@
+@use './variable.scss' as variable;
+@use './animation.scss';
+
+/*
+* Sass mixin
+*/
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin textGradientBackground {
+  background: linear-gradient(90deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin sectionTitle {
+  @include textGradientBackground;
+  font-size: 38px;
+}
+
+@mixin button {
+  background: linear-gradient(45deg, variable.$gradient-primary-color, variable.$gradient-secondary-color);
+  transition: .3s ease-in;
+  color: #FFF;
+  animation: button-animation 1.5s ease-in infinite;
+  outline: none;
+
+  &:hover {
+    border: none;
+    box-shadow: 0px -1px 100px 4px rgba(0, 148, 170, 0.75);
+    transform: scale(1.1);
+    transition: .3s ease-in;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
