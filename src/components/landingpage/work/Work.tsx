@@ -7,7 +7,6 @@ import SingleWork from './SingleWork';
 import React from 'react';
 
 export default function Work() {
-  // const lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis in nulla sint iure quae aperiam facere, porro voluptate natus tenetur officia nemo culpa id minus aut voluptatum. Sit, delectus!'
   const recentWork: RecentWorkType[] = [
     {
       id: 0,

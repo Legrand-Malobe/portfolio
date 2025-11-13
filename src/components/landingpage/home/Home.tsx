@@ -3,7 +3,7 @@ import { handleNavigation } from '../../../utils/handleNavigation';
 import './home.scss';
 import { triggerAnimation } from '../../../utils/triggerAnimation';
 import { ActiveLinkContext } from '../../../context/ActiveLinkContext';
-import introImg from '../../../assets/images/background01.gif';
+import introImg from '../../../assets/images/background02.gif';
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
