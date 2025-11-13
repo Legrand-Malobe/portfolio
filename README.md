@@ -1,9 +1,9 @@
 ## installation
 
 ```bash
-  # install Node.js (v18.15.0)
+  # install Node.js
 
-  # install yarn (v1.22.19)
+  # install yarn
   $ npm install --global yarn  
 
   # clone the projet
