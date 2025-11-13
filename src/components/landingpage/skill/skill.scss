@@ -60,7 +60,7 @@
 
     &.slide-in .skill-wrapper {
       opacity: 1;
-      animation: scaleImg;
+      animation: scaleImg .6s ease-in;
     }
   }
 }

@@ -15,7 +15,7 @@ import type { SkillType } from '../../../types/sectionTypes';
 export default function Skill() {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   const skillsList: SkillType[] = [
     { id: 0, icon: reactIcon, name: 'React', color: 'rgba(0, 216, 255, 0.75)' },
@@ -50,7 +50,7 @@ export default function Skill() {
   return (
     <div className="skill-container" id="skills">
       <div className="title">
-        Skills
+       Technical Skills
       </div>
       <div className={`skill-content ${isVisible ? 'slide-in' : 'hidden'}`} ref={containerRef}>
         {skillsList.map((skill, index) => (
@@ -63,7 +63,6 @@ export default function Skill() {
             }}>
             <div className="skill-wrapper"
               key={index}
-              style={{ animationDuration: `${index * 1}s` }}
             >
               <img src={skill.icon} alt="" />
               <div style={skillStyle(skill?.color)}></div>

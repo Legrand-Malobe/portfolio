@@ -28,12 +28,14 @@
   transition: .3s ease-in;
   color: #FFF;
   animation: button-animation 1.5s ease-in infinite;
+  outline: none;
 
   &:hover {
     border: none;
     box-shadow: 0px -1px 100px 4px rgba(0, 148, 170, 0.75);
     transform: scale(1.1);
     transition: .3s ease-in;
+    outline: none;
   }
 
   &:focus {

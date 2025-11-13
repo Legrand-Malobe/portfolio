@@ -96,6 +96,16 @@ header {
       .title {
         display: none;
       }
+
+      nav ul {
+        gap: 0;
+
+        menu {
+          &:first-child {
+            padding: 0;
+          }
+        }
+      }
     }
   }
 }
