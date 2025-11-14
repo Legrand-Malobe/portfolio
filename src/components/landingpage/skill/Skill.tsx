@@ -11,6 +11,7 @@ import mysqlIcon from '../../../assets/svg/stack/mysql.svg';
 import { useRef, useState, useEffect, type CSSProperties } from 'react';
 import { triggerAnimation } from '../../../utils/triggerAnimation';
 import type { SkillType } from '../../../types/sectionTypes';
+import phpIcon from '../../../assets/svg/stack/php.svg';
 
 export default function Skill() {
 
@@ -24,9 +25,10 @@ export default function Skill() {
     { id: 3, icon: nestjsIcon, name: 'NestJs', color: 'rgba(234, 40, 69, 0.75)' },
     { id: 4, icon: javascriptIcon, name: 'JavaScript', color: 'rgba(247, 223, 30, 0.75)' },
     { id: 5, icon: mysqlIcon, name: 'MySql', color: 'rgba(93, 135, 161, 0.75)' },
-    { id: 6, icon: sassIcon, name: 'Sass', color: 'rgba(140, 200, 75, 0.75)' },
+    { id: 6, icon: phpIcon, name: 'PHP', color: 'rgba(113, 130, 184, 0.75)' },
     { id: 7, icon: postgresqlIcon, name: 'PostgreSql', color: 'rgba(51, 103, 145, 0.75)' },
     { id: 8, icon: htmlIcon, name: 'HTML', color: 'rgba(241, 101, 41, 0.75)' },
+    { id: 9, icon: sassIcon, name: 'Sass', color: 'rgba(140, 200, 75, 0.75)' },
   ]
 
   useEffect(() => {
@@ -50,7 +52,7 @@ export default function Skill() {
   return (
     <div className="skill-container" id="skills">
       <div className="title">
-       Technical Skills
+        Technical Skills
       </div>
       <div className={`skill-content ${isVisible ? 'slide-in' : 'hidden'}`} ref={containerRef}>
         {skillsList.map((skill, index) => (
