@@ -22,7 +22,7 @@ header {
     padding: 0 2rem;
     border-radius: 12px;
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(25px);
     border: 1px solid rgba(255, 255, 255, 0.129);
     width: 100%;
 
@@ -34,7 +34,8 @@ header {
       padding-right: 5px;
       border-right: 2px solid variable.$primary-color;
       animation: typing 8s steps(40, end) .2s, blink-caret 0.75s step-end infinite;
-      max-width: 18ch
+      max-width: 18ch;
+      font-weight: 600;
     }
 
     nav {
@@ -46,7 +47,6 @@ header {
         gap: 2rem;
 
         .nav-item {
-          color: #CCC;
           opacity: .6;
           font-weight: 300;
         }
