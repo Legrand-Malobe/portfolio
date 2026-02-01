@@ -12,6 +12,8 @@ import { useRef, useState, useEffect, type CSSProperties } from 'react';
 import { triggerAnimation } from '../../../utils/triggerAnimation';
 import type { SkillType } from '../../../types/sectionTypes';
 import phpIcon from '../../../assets/svg/stack/php.svg';
+import laravelIcon from '../../../assets/svg/stack/laravel.svg';
+import tailwindIcon from '../../../assets/svg/stack/tailwind.svg';
 
 export default function Skill() {
 
@@ -25,10 +27,12 @@ export default function Skill() {
     { id: 3, icon: nestjsIcon, name: 'NestJs', color: 'rgba(234, 40, 69, 0.75)' },
     { id: 4, icon: javascriptIcon, name: 'JavaScript', color: 'rgba(247, 223, 30, 0.75)' },
     { id: 5, icon: mysqlIcon, name: 'MySql', color: 'rgba(93, 135, 161, 0.75)' },
-    { id: 6, icon: phpIcon, name: 'PHP', color: 'rgba(113, 130, 184, 0.75)' },
-    { id: 7, icon: postgresqlIcon, name: 'PostgreSql', color: 'rgba(51, 103, 145, 0.75)' },
-    { id: 8, icon: htmlIcon, name: 'HTML', color: 'rgba(241, 101, 41, 0.75)' },
-    { id: 9, icon: sassIcon, name: 'Sass', color: 'rgba(140, 200, 75, 0.75)' },
+    { id: 6, icon: laravelIcon, name: 'Laravel', color: 'rgba(255, 45, 32, 0.75)' },
+    { id: 7, icon: phpIcon, name: 'PHP', color: 'rgba(113, 130, 184, 0.75)' },
+    { id: 8, icon: postgresqlIcon, name: 'PostgreSql', color: 'rgba(51, 103, 145, 0.75)' },
+    { id: 9, icon: htmlIcon, name: 'HTML', color: 'rgba(241, 101, 41, 0.75)' },
+    { id: 10, icon: sassIcon, name: 'Sass', color: 'rgba(140, 200, 75, 0.75)' },
+    { id: 11, icon: tailwindIcon, name: 'Tailwind CSS', color: 'rgba(68, 168, 179, 0.75)' },
   ]
 
   useEffect(() => {
@@ -37,7 +41,7 @@ export default function Skill() {
 
   const skillStyle = (color?: string) => {
     const imgStyle: CSSProperties = {
-      boxShadow: `0px 0px 30px 13px ${color}`,
+      // boxShadow: `0px 0px 30px 13px ${color}`,
       background: 'transparent',
       height: '3px',
       aspectRatio: '1',
@@ -65,6 +69,9 @@ export default function Skill() {
             }}>
             <div className="skill-wrapper"
               key={index}
+              style={{
+                boxShadow: `-5px -5px 20px 0px ${skill.color} inset`
+              }}
             >
               <img src={skill.icon} alt="" />
               <div style={skillStyle(skill?.color)}></div>
@@ -72,7 +79,7 @@ export default function Skill() {
             <div className="label">{skill.name}</div>
           </div>
         ))}
-      </div>
     </div>
+    </div >
   )
 }

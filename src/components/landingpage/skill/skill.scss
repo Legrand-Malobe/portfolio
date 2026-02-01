@@ -23,10 +23,10 @@
 
     .skill-wrapper {
       aspect-ratio: 1;
-      border: 1px solid rgba(255, 255, 255, 0.129);
+      // border: 1px solid rgba(255, 255, 255, 0.129);
       border-radius: 50%;
       @include mixin.center;
-      background: rgba(255, 255, 255, 0.129);
+      // background: rgba(255, 255, 255, 0.129);
       transition: .3s ease-in;
       cursor: pointer;
       width: 70px;
