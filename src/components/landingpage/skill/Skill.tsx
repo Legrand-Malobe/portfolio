@@ -39,9 +39,8 @@ export default function Skill() {
     triggerAnimation(containerRef, setIsVisible);
   }, []);
 
-  const skillStyle = (color?: string) => {
+  const skillStyle = () => {
     const imgStyle: CSSProperties = {
-      // boxShadow: `0px 0px 30px 13px ${color}`,
       background: 'transparent',
       height: '3px',
       aspectRatio: '1',
@@ -74,7 +73,7 @@ export default function Skill() {
               }}
             >
               <img src={skill.icon} alt="" />
-              <div style={skillStyle(skill?.color)}></div>
+              <div style={skillStyle()}></div>
             </div>
             <div className="label">{skill.name}</div>
           </div>
